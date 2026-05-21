@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Sniglet', 'Arial', sans-serif;
+    background: url("images/tile2.webp") repeat;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+}
+
+
+/* //////////// responsive layout /////////// */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-items: start;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+}
+
+@media (max-width: 640px) {
+    .right {
+        margin-top: 3px;
+    }
+}
+
+
+/* //////////// main menu /////////// */
+.panel {
+    display: block;
+    padding: 0 2px;
+    position: relative;
+    pointer-events: none;
+    /* clicks will pass through panel's hitbox to bg */
+}
+
+.panel-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: auto;
+    /* This turns the image (and ONLY its clipped shape) into the link trigger! */
+    cursor: pointer;
+}
+
+/* //////////// panel positioning /////////// */
+.panel-portfolio {
+    margin-top: -19%;
+}
+
+.panel-commissions {
+    margin-top: -17.5%;
+}
+
+
+/* /////////// Clipping Paths //////////// */
+/* Percentages correspond to: top-left, top-right, bottom-right, bottom-left */
+.panel-about .panel-bg {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 63%, 0% 100%);
+}
+
+.panel-portfolio .panel-bg {
+    clip-path: polygon(0% 37%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.panel-events .panel-bg {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 64%, 0% 100%);
+}
+
+.panel-commissions .panel-bg {
+    clip-path: polygon(0% 36%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+/* //////////// foreground images /////////// */
+.panel-fg {
+    position: absolute;
+    height: auto;
+    display: block;
+
+    /* temp positioning, will get overwidden in inline style */
+    width: 40%;
+}
+
+.panel-portfolio .panel-fg {
+    filter: hue-rotate(20deg) brightness(1.2) contrast(.9);
+    transform: rotateX(-15deg) rotateY(40deg);
+}
+
+/* //////////// animation /////////// */
+@keyframes breathe {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.02);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes talk {
+    0% {
+        transform: scaleY(1);
+    }
+
+    40% {
+        transform: scaleY(1);
+    }
+
+    60% {
+        transform: scaleY(1.04);
+    }
+
+    70% {
+        transform: scaleY(1);
+    }
+
+    80% {
+        transform: scaleY(1.02);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.breathe {
+    transform-origin: bottom;
+    animation: breathe 2.5s ease-in-out infinite;
+}
+
+.talking {
+    transform-origin: bottom;
+    animation: talk 1s ease-in-out infinite;
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
