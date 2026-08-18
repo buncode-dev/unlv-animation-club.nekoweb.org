@@ -28,7 +28,8 @@ figure {
     flex-direction: column;
     gap: 15px;
     margin: 0;
-    width: min-content;
+    width: 100%;
+    max-width: 350px;
 }
 
 figure>* {
@@ -36,9 +37,8 @@ figure>* {
 }
 
 figure img {
-    max-height: 350px;
-    max-width: 270px;
-    object-fit: contain;
+    width: 100%;
+    height: auto;
 }
 
 date {
