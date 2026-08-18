@@ -1,0 +1,66 @@
+/* //////////// calendar /////////// */
+.calendar {
+    filter: hue-rotate(140deg);
+}
+
+/* //////////// club diary /////////// */
+.diary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+}
+
+.diary .title {
+    margin-bottom: -20px;
+}
+
+.entry {
+    background: whitesmoke;
+    padding: 5px 5px 10px;
+    box-shadow: 5px 5px 5px rgba(66, 69, 99, 0.3);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    width: min-content;
+}
+
+figure>* {
+    text-align: center;
+}
+
+figure img {
+    max-height: 350px;
+    max-width: 270px;
+    object-fit: contain;
+}
+
+date {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+/* //////////// charms /////////// */
+.charm {
+    position: absolute;
+    width: 80px;
+    top: 30%;
+}
+
+.right {
+    transform: rotate(10deg);
+    right: -40px;
+}
+
+.left {
+    transform: rotate(-10deg);
+    left: -40px;
+}
