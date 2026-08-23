@@ -53,7 +53,7 @@ section {
 
 header {
     width: 92%;
-    max-width: 700px;
+    max-width: 600px;
     margin: 20px auto;
     border-radius: 30px;
     overflow: hidden;
@@ -67,6 +67,7 @@ section {
 header img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 @media (max-width: 600px) {
