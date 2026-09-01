@@ -7,7 +7,8 @@ p {
 }
 
 a,
-.email-content {
+.email-content,
+footer a {
     color: #af7676;
 }
 

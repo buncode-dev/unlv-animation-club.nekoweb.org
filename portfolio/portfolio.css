@@ -14,8 +14,12 @@ h1 {
     color: #e1aaaa;
 }
 
-p {
-    color: #c1a3a3;
+footer p {
+    color: #8a7b7b;
+}
+
+footer a {
+    color: #b19595;
 }
 
 section {
@@ -24,7 +28,7 @@ section {
 }
 
 footer {
-    margin-bottom: 150px;
+    margin: -50px auto 170px;
 }
 
 .remote {

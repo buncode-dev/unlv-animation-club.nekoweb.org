@@ -75,8 +75,8 @@ main {
 /* /////////// Clipping Paths //////////// */
 /* Percentages correspond to: top-left, top-right, bottom-right, bottom-left */
 .panel-about .panel-bg {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 63%, 0% 100%);
-    
+    clip-path: polygon(0% 0%, 100% 0%, 100% 65%, 0% 100%);
+
 }
 
 .panel-portfolio .panel-bg {
@@ -104,7 +104,7 @@ main {
 
 .panel-portfolio .panel-fg {
     filter: hue-rotate(20deg) brightness(1.2) contrast(.9);
-    transform: rotateX(-20deg) rotateY(43deg);
+    transform: rotateX(-20deg) rotateY(43deg) scaleY(1.03);
 }
 
 /* //////////// animation /////////// */

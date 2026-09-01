@@ -11,6 +11,7 @@
     gap: 50px;
     background: none;
     box-shadow: none;
+    overflow: hidden;
 }
 
 .diary .title {
@@ -63,4 +64,10 @@ date {
 .left {
     transform: rotate(-10deg);
     left: -40px;
+}
+
+/* //////////// footer /////////// */
+footer {
+    margin: -50px auto 30px;
+    padding: 10px;
 }
