@@ -2,6 +2,14 @@
 .calendar {
     filter: hue-rotate(140deg);
 }
+small {
+    color: #605757;
+    margin: 5px;
+}
+small a {
+    color: #fc6b88;
+    text-decoration: underline;
+}
 
 /* //////////// club diary /////////// */
 .diary {
