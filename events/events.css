@@ -2,10 +2,12 @@
 .calendar {
     filter: hue-rotate(140deg);
 }
+
 small {
     color: #605757;
     margin: 5px;
 }
+
 small a {
     color: #fc6b88;
     text-decoration: underline;
@@ -19,7 +21,13 @@ small a {
     gap: 50px;
     background: none;
     box-shadow: none;
-    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    /* stop horizontal scrolling on mobile */
+    .diary {
+        overflow-x: clip;
+    }
 }
 
 .diary .title {
